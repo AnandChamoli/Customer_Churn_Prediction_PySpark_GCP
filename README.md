@@ -1,5 +1,7 @@
 # Customer Churn Prediction using PySpark & Google Cloud Platform
 
+![Project Banner](images/project_banner.png)
+
 ## Project Overview
 
 Customer retention is one of the most critical challenges faced by subscription-based businesses. Acquiring new customers is often more expensive than retaining existing ones, making churn prediction an essential business capability.
@@ -74,18 +76,27 @@ Customer churn occurs when customers discontinue a product or service. Organizat
 
 ## Project Architecture
 
-Local Development (Google Colab)
-↓
-Data Exploration & Model Development
-↓
+
+Google Colab
+      │
+      ▼
+Data Exploration & Feature Engineering
+      │
+      ▼
 Google Cloud Storage (GCS)
-↓
+      │
+      ▼
 Google Dataproc Cluster
-↓
-PySpark Processing
-↓
-Machine Learning Models
-↓
+      │
+      ▼
+PySpark ML Pipeline
+      │
+      ▼
+Logistic Regression
+Decision Tree
+Random Forest
+      │
+      ▼
 Customer Churn Prediction
 
 ---
@@ -99,6 +110,8 @@ Customer Churn Prediction
 * Schema validation
 * Class distribution analysis
 
+### Churn Distribution
+
 <img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/6c079e78-ec31-4e0a-8dec-9227596e488d" />
 
 Insights:
@@ -106,8 +119,11 @@ Insights:
 - Long-term contracts demonstrate better retention.
 - Contract type is a strong churn indicator.
 
+### Contract Type vs Churn
 
 <img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/6c1e9a0f-c76f-43ae-87e9-7718b9acaf69" />
+
+### Internet Service Type vs Churn
 
 <img width="574" height="497" alt="image" src="https://github.com/user-attachments/assets/21a600ae-74de-447e-bb0d-fd4d75d4453f" />
 
@@ -158,6 +174,7 @@ The following models were developed and evaluated:
 | Random Forest       | 0.6791   | 0.6776   | 0.7407  |
 
 ---
+### Dataset Schema
 
 <img width="889" height="490" alt="image" src="https://github.com/user-attachments/assets/a5083bed-e93d-46fa-a4f7-bc306114b700" />
 
