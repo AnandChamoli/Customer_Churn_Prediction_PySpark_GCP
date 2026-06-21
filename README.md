@@ -56,6 +56,7 @@ Customer churn occurs when customers discontinue a product or service. Organizat
 
 ## Project Architecture
 
+```text
 Google Colab
       │
       ▼
@@ -71,16 +72,13 @@ Google Dataproc Cluster
 PySpark ML Pipeline
       │
       ▼
-Logistic Regression
-Decision Tree
-Random Forest
+Machine Learning Models
       │
       ▼
 Customer Churn Prediction
+```
 
----
-
-## Methodology
+## Project Workflow
 
 ### 1. Data Exploration
 
