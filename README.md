@@ -1,6 +1,6 @@
 # Customer Churn Prediction using PySpark & Google Cloud Platform
 
-![Project Banner](images/project_banner.png)
+https://chatgpt.com/s/m_6a37825d019881919ae3e43d9770554a
 
 ## Project Overview
 
@@ -11,6 +11,14 @@ In this project, I developed and evaluated machine learning models to predict cu
 The project compares the performance of Logistic Regression, Decision Tree, and Random Forest models on datasets ranging from 50,000 to 1,000,000 customer records.
 
 ---
+## Project Highlights
+
+- Built end-to-end customer churn prediction pipeline
+- Processed datasets up to 1,000,000 customer records
+- Developed and evaluated 3 machine learning models
+- Deployed solution on Google Cloud Dataproc using PySpark
+- Achieved ROC-AUC of 0.7407 using Random Forest
+- Demonstrated scalable analytics from local development to cloud deployment
 
 ## Business Problem
 
@@ -37,9 +45,6 @@ Customer churn occurs when customers discontinue a product or service. Organizat
 
 * Records: 1,000,000
 * Features: 17
-
-
-<img width="690" height="490" alt="image" src="https://github.com/user-attachments/assets/ca0a119a-20fd-43a9-908b-efeffba61002" />
 
 
 ### Key Features
@@ -112,6 +117,10 @@ Customer Churn Prediction
 
 ### Churn Distribution
 
+<img width="690" height="490" alt="image" src="https://github.com/user-attachments/assets/ca0a119a-20fd-43a9-908b-efeffba61002" />
+
+### Contract Type vs Churn
+
 <img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/6c079e78-ec31-4e0a-8dec-9227596e488d" />
 
 Insights:
@@ -119,11 +128,11 @@ Insights:
 - Long-term contracts demonstrate better retention.
 - Contract type is a strong churn indicator.
 
-### Contract Type vs Churn
+### Internet Service Type vs Churn
 
 <img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/6c1e9a0f-c76f-43ae-87e9-7718b9acaf69" />
 
-### Internet Service Type vs Churn
+### Correlation Heatmap
 
 <img width="574" height="497" alt="image" src="https://github.com/user-attachments/assets/21a600ae-74de-447e-bb0d-fd4d75d4453f" />
 
@@ -174,6 +183,16 @@ The following models were developed and evaluated:
 | Random Forest       | 0.6791   | 0.6776   | 0.7407  |
 
 ---
+### Best Performing Models
+
+| Metric | Best Model |
+|----------|----------|
+| Accuracy | Decision Tree |
+| F1 Score | Decision Tree |
+| ROC-AUC | Random Forest |
+
+Random Forest achieved the highest ROC-AUC score of 0.7407, making it the strongest model for identifying churn-prone customers.
+
 ### Dataset Schema
 
 <img width="889" height="490" alt="image" src="https://github.com/user-attachments/assets/a5083bed-e93d-46fa-a4f7-bc306114b700" />
@@ -220,10 +239,9 @@ Used to process large datasets using distributed PySpark computing.
 
 ### PySpark ML
 
-<img width="1400" height="804" alt="PART-B-2_GCP_Lab5_ProductionEnv" src="https://github.com/user-attachments/assets/6b07ffaa-7620-4d43-bc7b-32833befe136" />
+### PySpark ML Pipeline Execution
 
 <img width="1411" height="788" alt="PART-B-1_GCP_Lab5_ProductionEnv" src="https://github.com/user-attachments/assets/dbf12da3-5570-4042-a95e-7fc0e9d72555" />
-
 
 Used to build scalable machine learning pipelines.
 
@@ -233,7 +251,6 @@ This deployment demonstrated how the same analytics workflow can scale from a lo
 
 ## Repository Structure
 
-```text
 Customer_Churn_Prediction_PySpark_GCP/
 │
 ├── notebooks/
@@ -254,7 +271,6 @@ Customer_Churn_Prediction_PySpark_GCP/
 ├── README.md
 │
 └── requirements.txt
-```
 
 ---
 
@@ -283,6 +299,21 @@ Through this project, I gained hands-on experience with:
 * Business Problem Solving
 
 ---
+
+## Skills Demonstrated
+
+- Machine Learning
+- Customer Analytics
+- Predictive Modeling
+- PySpark
+- Big Data Analytics
+- Google Cloud Platform
+- Dataproc
+- Google Cloud Storage
+- Data Preprocessing
+- Model Evaluation
+- Business Analytics
+
 
 ## Author
 
