@@ -1,6 +1,6 @@
 # Customer Churn Prediction using PySpark & Google Cloud Platform
 
-https://chatgpt.com/s/m_6a37825d019881919ae3e43d9770554a
+Predicting customer churn using machine learning and scalable cloud analytics on datasets ranging from 50,000 to 1,000,000 customer records.
 
 ## Project Overview
 
@@ -11,6 +11,7 @@ In this project, I developed and evaluated machine learning models to predict cu
 The project compares the performance of Logistic Regression, Decision Tree, and Random Forest models on datasets ranging from 50,000 to 1,000,000 customer records.
 
 ---
+
 ## Project Highlights
 
 - Built end-to-end customer churn prediction pipeline
@@ -34,53 +35,26 @@ Customer churn occurs when customers discontinue a product or service. Organizat
 
 ---
 
-## Dataset
+## Dataset Summary
 
-### Small Dataset
+| Dataset | Records | Features |
+|----------|----------|----------|
+| Small Dataset | 50,000 | 17 |
+| Big Dataset | 1,000,000 | 17 |
 
-* Records: 50,000
-* Features: 17
+### Key Feature Categories
 
-### Big Dataset
-
-* Records: 1,000,000
-* Features: 17
-
-
-### Key Features
-
-* Customer_Tenure
-* Monthly_Charges
-* Total_Charges
-* Contract_Type
-* Payment_Method
-* Internet_Service_Type
-* Online_Security
-* Tech_Support
-* Partner_Status
-* Dependents
-* Paperless_Billing
-* Customer_Segment
-* Churn (Target Variable)
-
----
-
-## Technology Stack
-
-* Python
-* PySpark
-* Scikit-Learn
-* Google Colab
-* Google Cloud Platform (GCP)
-* Google Cloud Storage (GCS)
-* Google Dataproc
-* Pandas
-* NumPy
+| Category | Features |
+|-----------|-----------|
+| Customer Profile | Customer_Tenure, Partner_Status, Dependents |
+| Billing Information | Monthly_Charges, Total_Charges, Payment_Method |
+| Service Information | Internet_Service_Type, Online_Security, Tech_Support |
+| Account Information | Contract_Type, Paperless_Billing, Customer_Segment |
+| Target Variable | Churn |
 
 ---
 
 ## Project Architecture
-
 
 Google Colab
       │
@@ -136,11 +110,11 @@ Insights:
 
 <img width="574" height="497" alt="image" src="https://github.com/user-attachments/assets/21a600ae-74de-447e-bb0d-fd4d75d4453f" />
 
+Insights:
 - Total Charges strongly correlate with Tenure.
 - Monthly Charges show moderate relationships.
 - No severe multicollinearity observed.
   
-
 ### 2. Data Preprocessing
 
 * Handling missing values
@@ -183,6 +157,7 @@ The following models were developed and evaluated:
 | Random Forest       | 0.6791   | 0.6776   | 0.7407  |
 
 ---
+
 ### Best Performing Models
 
 | Metric | Best Model |
@@ -192,12 +167,6 @@ The following models were developed and evaluated:
 | ROC-AUC | Random Forest |
 
 Random Forest achieved the highest ROC-AUC score of 0.7407, making it the strongest model for identifying churn-prone customers.
-
-### Dataset Schema
-
-<img width="889" height="490" alt="image" src="https://github.com/user-attachments/assets/a5083bed-e93d-46fa-a4f7-bc306114b700" />
-
-## Key Findings
 
 ### Small Dataset
 
@@ -210,6 +179,10 @@ Random Forest achieved the highest ROC-AUC score of 0.7407, making it the strong
 * Random Forest achieved the highest ROC-AUC (0.7407).
 * Decision Tree achieved the highest Accuracy and F1 Score.
 
+### Model Performance Comparison
+
+<img width="2700" height="1500" alt="model_comparison" src="https://github.com/user-attachments/assets/72557ed3-72a9-45c1-a8e5-5ab3a91981a3" />
+
 ### Business Insights
 
 * Machine learning can effectively identify customers at risk of churn.
@@ -221,57 +194,40 @@ Random Forest achieved the highest ROC-AUC score of 0.7407, making it the strong
 
 ## Google Cloud Implementation
 
-The solution was deployed on Google Cloud Platform using:
+The project was developed locally using Google Colab and scaled to Google Cloud Platform for distributed processing and machine learning.
 
 ### Google Cloud Storage (GCS)
 
 <img width="1424" height="796" alt="GCS Bucket" src="https://github.com/user-attachments/assets/eba4a677-5cc4-45e4-8f55-5c85ab4a3908" />
 
-
-Used for storing and accessing datasets.
+Used as the centralized storage layer for datasets and project artifacts.
 
 ### Google Dataproc
 
 <img width="1433" height="767" alt="Dataproc Cluster" src="https://github.com/user-attachments/assets/fb899950-4425-450f-abf7-a8090da4d4cd" />
 
-
-Used to process large datasets using distributed PySpark computing.
+Used to execute PySpark workloads on distributed infrastructure.
 
 ### PySpark ML
 
 ### PySpark ML Pipeline Execution
 
-<img width="1411" height="788" alt="PART-B-1_GCP_Lab5_ProductionEnv" src="https://github.com/user-attachments/assets/dbf12da3-5570-4042-a95e-7fc0e9d72555" />
+Executed machine learning workflows and model evaluation on cloud resources.
 
-Used to build scalable machine learning pipelines.
+<img width="1411" height="788" alt="PART-B-1_GCP_Lab5_ProductionEnv" src="https://github.com/user-attachments/assets/dbf12da3-5570-4042-a95e-7fc0e9d72555" />
 
 This deployment demonstrated how the same analytics workflow can scale from a local development environment to a distributed cloud environment with minimal code changes.
 
 ---
 
-## Repository Structure
+## Repository Contents
 
-Customer_Churn_Prediction_PySpark_GCP/
-│
-├── notebooks/
-│   ├── Step3_EDA.ipynb
-│   ├── Step4_SmallData.ipynb
-│   └── Step4_BigData.ipynb
-│
-├── reports/
-│   └── CIS415_Final_Project_Report.pdf
-│
-├── images/
-│   ├── dataproc_cluster.png
-│   ├── gcs_bucket.png
-│   ├── churn_distribution.png
-│   ├── correlation_heatmap.png
-│   └── model_comparison.png
-│
-├── README.md
-│
-└── requirements.txt
-
+| Folder | Description |
+|---------|-------------|
+| notebooks | Data exploration, preprocessing, and machine learning workflows |
+| reports | Final project report and supporting documentation |
+| images | Visualizations, cloud deployment screenshots, and project assets |
+| README.md | Project overview and documentation |
 ---
 
 ## Future Improvements
@@ -300,6 +256,20 @@ Through this project, I gained hands-on experience with:
 
 ---
 
+## Technology Stack
+
+* Python
+* PySpark
+* Scikit-Learn
+* Google Colab
+* Google Cloud Platform (GCP)
+* Google Cloud Storage (GCS)
+* Google Dataproc
+* Pandas
+* NumPy
+
+---
+
 ## Skills Demonstrated
 
 - Machine Learning
@@ -313,7 +283,6 @@ Through this project, I gained hands-on experience with:
 - Data Preprocessing
 - Model Evaluation
 - Business Analytics
-
 
 ## Author
 
